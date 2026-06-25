@@ -1,0 +1,40 @@
+{
+  "application": {
+    "name": "security-scanner",
+    "version": "1.0.0",
+    "environment": "development"
+  },
+  "database": {
+    "host": "localhost",
+    "port": 3306,
+    "username": "admin",
+    "password": "Password@123"
+  },
+  "aws": {
+    "accessKey": "AKIA1234567890ABCDEF",
+    "secretKey": "fakeAwsSecretKey1234567890abcdef"
+  },
+  "github": {
+    "token": "ghp_1234567890abcdefghijklmnopqrstuvwxyz"
+  },
+  "jwt": {
+    "secret": "mySuperSecretJwtKey123456789"
+  },
+  "api": {
+    "key": "sk_test_51Nabcdef1234567890"
+  },
+  "mail": {
+    "host": "smtp.gmail.com",
+    "port": 587,
+    "username": "test@example.com",
+    "password": "EmailPassword@123"
+  },
+  "oauth": {
+    "clientId": "client-id-12345",
+    "clientSecret": "client-secret-abcdef123456"
+  },
+  "encryption": {
+    "privateKeyPath": "/keys/private-key.pem",
+    "publicKeyPath": "/keys/public-key.pem"
+  }
+}

@@ -1,0 +1,48 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: security-scanner
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/security_scanner_db
+    username: root
+    password: root123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+  jackson:
+    serialization:
+      indent-output: true
+
+gitlab:
+  url: https://gitlab.example.com
+  token: glpat_xxxxxxxxxxxxxxxxxxxx
+
+scan:
+  sensitive-files:
+    - application.properties
+    - application.yml
+    - .env
+    - id_rsa
+    - secrets.txt
+    - config.json
+
+logging:
+  level:
+    root: INFO
+    com.example.securityScanner: DEBUG
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
